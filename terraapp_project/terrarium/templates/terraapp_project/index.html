@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Terrarium</title>
+</head>
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'terrarium/style.css' %}">
+<body>
+<div>
+    <h2>Terrarium</h2><b/><small>Gardez un oeil sur votre terrarium en temps et en heure</small>
+<h1 class = "ok">La température actuelle est de 25 degrés</h1>
+
+
+
+<button class="button1">
+    Augmenter la temperature +
+</button>
+
+<button class="button2">
+    Diminuer la temperature -
+</button>
+</div>
+<th>ID</th>
+<th>Temperature</th>
+<th>Humidité</th>
+<th>Animal</th>
+{% for temperature in temperature %}
+<th>{{temperature.name}}</th>
+<th>{{humidité.name}}</th>
+<th>{{animal.name}}</th>
+{% endfor %}
+
+</body>
+</html>
